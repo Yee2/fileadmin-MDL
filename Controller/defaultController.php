@@ -1,20 +1,16 @@
 <?php
-/**
- *
- */
+namespace FA\Controller;
+use Yee\Foundation\Controller;
+use Yee\Foundation\View;
+
 class defaultController extends Controller
 {
 
-  function index()
+  function IndexAction()
   {
-    $this->add("message","welcome!\n");
-  }
-  function modelTest(){
-    $model = new Model;
-    $res = $model->query("SHOW TABLES");
-    $this->data([
-      "tables"=>$res->fetchAll()
-    ]);
+      $view = new View($this->APP);
+      $view->world = "world";
+      $view->render('index');
   }
 }
- ?>
+

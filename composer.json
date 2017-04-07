@@ -1,0 +1,14 @@
+{
+    "name": "yee/moe",
+    "type": "composer-plugin",
+    "require": {
+        "php": ">=7.0"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Yee\\": "src/",
+            "FA\\":""
+        }
+    }
+}
